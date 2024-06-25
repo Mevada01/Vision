@@ -1008,6 +1008,24 @@ textarea.form-input {
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
 }
+
+/* 
+a .temp_img {
+    max-height: 635px !important;
+}
+
+a .temp_img img {
+    height: 100% !important;
+    object-fit: cover !important;
+    width: 100% !important;
+} */

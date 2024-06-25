@@ -325,8 +325,8 @@ function initializeOwl() {
                 autoplay: autoplay,
                 autoheight: 1,
                 autoWidth: autoWidth,
-                items: items,
-                center: center,
+                items: 1,
+                center: false,
                 loop: loop,
                 margin: margin,
                 nav: nav,
@@ -341,8 +341,8 @@ function initializeOwl() {
                     },
                     768: {
                         autoWidth: autoWidth,
-                        items: items,
-                        center: center
+                        items: 1,
+                        center: false
                     }
                 }
             });
