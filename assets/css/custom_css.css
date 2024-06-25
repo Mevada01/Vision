@@ -1375,3 +1375,30 @@ a .temp_img img {
 .btn-slide2 span.title-hover2 {
     color: #fff;
 }
+
+@media (max-width:767px) {
+
+    .sub-btn,
+    .form_close {
+        width: 100%;
+    }
+    .hire-popup h6 {
+        font-size: 18px;
+    }
+
+    .commun-close-icon {
+        /* position: absolute; */
+        top: -5px;
+        right: -2px;
+        /* border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: #ff000000;
+        color: #212529;
+        padding: 7px;
+        cursor: pointer;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s; */
+    }
+
+}
