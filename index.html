@@ -937,9 +937,8 @@
             <div class="container">
                 <div class="row" style="margin: 10px 0;">
                     <div class="col-12 text-center">
-                        <a href="#" class="brand"><img
-                                src="assets/img/Vision_Imgs/Logo/Vision Group Logo.png" style="width: 200px;"
-                                alt=""></a>
+                        <a href="#" class="brand"><img src="assets/img/Vision_Imgs/Logo/Vision Group Logo.png"
+                                style="width: 200px;" alt=""></a>
                     </div>
                 </div>
                 <!--end brand-->
@@ -1221,6 +1220,18 @@
             </div>
         </div>
     </div>
+
+    <div class="social-main hidden">
+        <div class="d-flex flex-column">
+            <a href="">
+                <img src="assets/img/Vision_Imgs/icon/facebook.png" alt="">
+            </a>
+            <a href="">
+                <img src="assets/img/Vision_Imgs/icon/instagram_icon.png" alt="">
+            </a>
+        </div>
+    </div>
+
     <!--end modal-->
 
     <!--end outer-wrapper-->
@@ -1378,6 +1389,24 @@
                 download: false
             });
         });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var socialMain = document.querySelector(".social-main");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= 300) {
+                    socialMain.classList.remove("hidden");
+                    socialMain.classList.add("visible");
+                } else {
+                    socialMain.classList.remove("visible");
+                    socialMain.classList.add("hidden");
+                }
+            });
+        });
+
+
     </script>
 
 
