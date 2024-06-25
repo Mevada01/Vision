@@ -326,7 +326,7 @@ function initializeOwl() {
                 autoheight: 1,
                 autoWidth: autoWidth,
                 items: 1,
-                center: false,
+                center: true,
                 loop: loop,
                 margin: margin,
                 nav: nav,
@@ -337,12 +337,12 @@ function initializeOwl() {
                     0: {
                         items: 1,
                         autoWidth: false,
-                        center: false
+                        center: true
                     },
                     768: {
                         autoWidth: autoWidth,
                         items: 1,
-                        center: false
+                        center: true
                     }
                 }
             });
