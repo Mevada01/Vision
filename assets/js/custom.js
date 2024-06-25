@@ -154,7 +154,6 @@ $(document).ready(function ($) {
     //         }
     //     });
     // }
-
     if ($("body").hasClass("links-hover-effect")) {
         $("a, button").each(function () {
             if (!$(this).hasClass("image-popup") &&
@@ -162,7 +161,8 @@ $(document).ready(function ($) {
                 !$(this).hasClass("arrow-up") &&
                 !$(this).hasClass("image") &&
                 !$(this).hasClass("no-hover-effect") &&
-                !$(this).hasClass("lightgallery-item")) { // Exclude LightGallery items
+                !$(this).hasClass("lightgallery-item") &&
+                !$(this).hasClass("btn-slide2")) { // Exclude btn-slide2 class
                 $(this).addClass("hover-effect");
                 var htmlContent = $(this).html();
                 $(this).text("");
