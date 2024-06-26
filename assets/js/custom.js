@@ -162,11 +162,12 @@ $(document).ready(function ($) {
                 !$(this).hasClass("image") &&
                 !$(this).hasClass("no-hover-effect") &&
                 !$(this).hasClass("lightgallery-item") &&
-                !$(this).hasClass("btn-slide2")) { // Exclude btn-slide2 class
+                !$(this).hasClass("btn-slide2") &&
+                !$(this).closest('.big-gallery').length) { // Exclude links inside the slider
                 $(this).addClass("hover-effect");
                 var htmlContent = $(this).html();
                 $(this).text("");
-                $(this).append("<span><div class='hover-element'>" + htmlContent + "</div><div class='hover-element'>" + htmlContent + "</div></span>");
+                $(this).append("<span class='hover-effect-content'>" + htmlContent + "</span>");
             }
         });
     }

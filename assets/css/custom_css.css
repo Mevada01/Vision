@@ -667,8 +667,9 @@ input[type='submit']:hover {
 }
 
 textarea.form-input {
-    height: 100px;
+    height: 75px;
     margin-bottom: 0 !important;
+    
 }
 
 /* 22.3. Input with border ========================================================================== */
@@ -1476,6 +1477,41 @@ a .temp_img img {
     -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
     animation: blur-text 1.5s 1.2s infinite linear alternate;
 }
+.loading-text span:nth-child(8) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1.4s infinite linear alternate;
+    animation: blur-text 1.5s 1.4s infinite linear alternate;
+}
+.loading-text span:nth-child(9) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1.6s infinite linear alternate;
+    animation: blur-text 1.5s 1.6s infinite linear alternate;
+}
+.loading-text span:nth-child(10) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1.8s infinite linear alternate;
+    animation: blur-text 1.5s 1.8s infinite linear alternate;
+}
+.loading-text span:nth-child(11) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 2s infinite linear alternate;
+    animation: blur-text 1.5s 2s infinite linear alternate;
+}
+.loading-text span:nth-child(12) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 2.2s infinite linear alternate;
+    animation: blur-text 1.5s 2.2s infinite linear alternate;
+}
+.loading-text span:nth-child(13) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 2.4s infinite linear alternate;
+    animation: blur-text 1.5s 2.4s infinite linear alternate;
+}
+.loading-text span:nth-child(14) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 2.6s infinite linear alternate;
+    animation: blur-text 1.5s 2.6s infinite linear alternate;
+}
 
 @-webkit-keyframes blur-text {
     0% {
@@ -1508,10 +1544,30 @@ a .temp_img img {
     .big-gallery .slide img {
         height: 450px;
     }
+    /* .text-align-right-md{
+        text-align: right !important;
+    } */
 }
 
 @media (max-width:450px) {
     .big-gallery .slide img {
         height: 250px;
     }
+}
+
+
+@media (min-width:767px) {
+     .text-align-left-md{
+        text-align: left !important;
+    }
+     .text-align-right-md{
+        text-align: right !important;
+    }
+    .mb-3{
+        margin-bottom: 30px !important; 
+    }
+}
+
+.my-2{
+    margin: 10px 0;
 }

@@ -22,12 +22,10 @@
     <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css" rel="stylesheet">
 
     <!-- LightGallery JS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lg-zoom/dist/lg-zoom.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -37,17 +35,24 @@
 
 </head>
 
-<body class="links-hover-effect"  data-spy="scroll" data-target=".navigation">
+<body class="links-hover-effect" data-spy="scroll" data-target=".navigation">
 
     <div class="loading has-loading-screen" data-target=".navigation">
         <div class="loading-text">
+            <span class="loading-text-words">P</span>
             <span class="loading-text-words">L</span>
-            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">E</span>
             <span class="loading-text-words">A</span>
-            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">S</span>
+            <span class="loading-text-words">E</span>
+            <span class="loading-text-words">&nbsp;</span>
+            <span class="loading-text-words">W</span>
+            <span class="loading-text-words">A</span>
             <span class="loading-text-words">I</span>
-            <span class="loading-text-words">N</span>
-            <span class="loading-text-words">G</span>
+            <span class="loading-text-words">T</span>
+            <span class="loading-text-words">.</span>
+            <span class="loading-text-words">.</span>
+            <span class="loading-text-words">.</span>
         </div>
     </div>
 
@@ -356,35 +361,207 @@
                 <div class="container">
                     <h2>Gallery</h2>
                 </div>
-                <div class="owl-carousel big-gallery" data-owl-items="3" data-owl-auto-width="1" data-owl-nav="1"
-                    data-owl-dots="0" data-owl-center="1" data-owl-loop="1" data-owl-nav-container="#big-gallery-nav">
-                    <div class="slide">
+                <div id="lightgallery" class="owl-carousel big-gallery" data-owl-items="3" data-owl-auto-width="1"
+                    data-owl-nav="1" data-owl-dots="0" data-owl-center="1" data-owl-loop="1"
+                    data-owl-nav-container="#big-gallery-nav">
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/01.jpg">
                         <div class="container">
-                            <a href="assets/img/Vision_Imgs/05/01.jpg">
+                            <a href="assets/img/Vision_Imgs/05/01.jpg" data-sub-html="<h4>Fors of Luxuries</h4>">
                                 <img src="assets/img/Vision_Imgs/05/01.jpg" alt="">
                             </a>
                             <div class="description">
-                                <h3 class="framed">Front View</h3>
+                                <h3 class="framed">Fors of Luxuries</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/02.jpg">
                         <div class="container">
-                            <a href="assets/img/Vision_Imgs/05/16.jpg">
+                            <a href="assets/img/Vision_Imgs/05/02.jpg" data-sub-html="<h4>Smartly Planned Towers</h4>">
+                                <img src="assets/img/Vision_Imgs/05/02.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Smartly Planned Towers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/03.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/03.jpg" data-sub-html="<h4>Spacious Homes</h4>">
+                                <img src="assets/img/Vision_Imgs/05/03.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Spacious Homes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/04.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/04.jpg" data-sub-html="<h4>Landscape</h4>">
+                                <img src="assets/img/Vision_Imgs/05/04.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Landscape</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/05.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/05.jpg" data-sub-html="<h4>Club House</h4>">
+                                <img src="assets/img/Vision_Imgs/05/05.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Club House</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/06.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/06.jpg" data-sub-html="<h4>Garden</h4>">
+                                <img src="assets/img/Vision_Imgs/05/06.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Garden</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/07.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/07.jpg" data-sub-html="<h4>Sitting Area</h4>">
+                                <img src="assets/img/Vision_Imgs/05/07.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Sitting Area</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/08.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/08.jpg" data-sub-html="<h4>Multi Game Cour</h4>">
+                                <img src="assets/img/Vision_Imgs/05/08.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Multi Game Cour</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/09.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/09.jpg"
+                                data-sub-html="<h4>Central garden sanctuary</h4>">
+                                <img src="assets/img/Vision_Imgs/05/09.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Central garden sanctuary</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/10.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/10.jpg" data-sub-html="<h4>Foyer</h4>">
+                                <img src="assets/img/Vision_Imgs/05/10.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Foyer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/11.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/11.jpg" data-sub-html="<h4>Private foyer</h4>">
+                                <img src="assets/img/Vision_Imgs/05/11.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Private foyer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/12.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/12.jpg" data-sub-html="<h4>Living Room</h4>">
+                                <img src="assets/img/Vision_Imgs/05/12.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Living Room</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/13.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/13.jpg" data-sub-html="<h4>Kitchen</h4>">
+                                <img src="assets/img/Vision_Imgs/05/13.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Kitchen</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/14.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/14.jpg" data-sub-html="<h4>BedRoom</h4>">
+                                <img src="assets/img/Vision_Imgs/05/14.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">BedRoom</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/15.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/15.jpg" data-sub-html="<h4>Balcony</h4>">
+                                <img src="assets/img/Vision_Imgs/05/15.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Balcony</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/16.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/16.jpg" data-sub-html="<h4>Banquet Hall</h4>">
                                 <img src="assets/img/Vision_Imgs/05/16.jpg" alt="">
                             </a>
                             <div class="description">
-                                <h3 class="framed">Garage</h3>
+                                <h3 class="framed">Banquet Hall</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="slide">
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/17.jpg">
                         <div class="container">
-                            <a href="assets/img/Vision_Imgs/05/17.jpg">
+                            <a href="assets/img/Vision_Imgs/05/17.jpg" data-sub-html="<h4>Toddlers Play Area</h4>">
                                 <img src="assets/img/Vision_Imgs/05/17.jpg" alt="">
                             </a>
                             <div class="description">
-                                <h3 class="framed">Back View</h3>
+                                <h3 class="framed">Toddlers Play Area</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/18.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/18.jpg" data-sub-html="<h4>Indoor Game Room</h4>">
+                                <img src="assets/img/Vision_Imgs/05/18.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Indoor Game Room</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/19.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/19.jpg" data-sub-html="<h4>Gym</h4>">
+                                <img src="assets/img/Vision_Imgs/05/19.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Gym</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-src="assets/img/Vision_Imgs/05/20.jpg">
+                        <div class="container">
+                            <a href="assets/img/Vision_Imgs/05/20.jpg" data-sub-html="<h4>Yoga Meditation Room</h4>">
+                                <img src="assets/img/Vision_Imgs/05/20.jpg" alt="">
+                            </a>
+                            <div class="description">
+                                <h3 class="framed">Yoga Meditation Room</h3>
                             </div>
                         </div>
                     </div>
@@ -395,6 +572,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!--end block-->
             <div class="container">
@@ -479,7 +657,7 @@
 
             <!-- form section start -->
             <section id="inquiry" class="pos-rel bg-img-cover"
-                style="background-image: url(assets/img/Vision_Imgs/architecture-buildings-city-fog-373965.jpg);">
+                style="background-image: url(assets/img/Vision_Imgs/Inquiry.jpg);">
                 <!-- bg-overlay -->
                 <div class="bg-overlay-black bg-overlay-black_47"></div>
                 <!-- pos-rel start -->
@@ -518,7 +696,7 @@
                             <!-- column start -->
                             <div class="col-12">
                                 <textarea name="" id="" placeholder="Enter your message"
-                                    class="form-input js-pointer-small"></textarea>
+                                    class="form-input js-pointer-small" rows="3"></textarea>
                             </div>
                             <!-- column end -->
                             <!-- column start -->
@@ -580,20 +758,27 @@
 
         <footer id="contact" class="block background-is-dark">
             <div class="container">
-                <div class="row" style="margin: 10px 0;">
+                <div class="row my-2 mb-3">
                     <div class="col-12 text-center">
-                        <a href="#" class="brand"><img src="assets/img/Vision_Imgs/Logo/Vision Group Logo.png"
-                                style="width: 200px;" alt=""></a>
+                        <!-- <p>Developed By</p> -->
+                        <a href="#" class="brand">
+                            <p style="opacity: 1;">Developed By</p>
+                            <img src="assets/img/Vision_Imgs/Logo/Vision Group Logo_White.png" style="width: 130px;"
+                                alt="">
+                        </a>
                     </div>
                 </div>
                 <!--end brand-->
                 <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <a href="#" class="brand"><img src="assets/img/Vision_Imgs/Logo/Vision_Ventilla_Logo_White.png"
-                                style="width: 200px;" alt=""></a>
+                    <div class="col-md-4 col-sm-4 col-12 my-2">
+                        <div class="contact-data text-align-left-md text-center">
+                            <a href="#" class="brand"><img
+                                    src="assets/img/Vision_Imgs/Logo/Vision Ventilla_Logo White_Full.png"
+                                    style="width: 200px;" alt=""></a>
+                        </div>
                     </div>
                     <!--end col-md-4-->
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4 col-12 my-2">
                         <div class="contact-data text-center">
                             <!-- <figure>+1 (734) 123-4567</figure> -->
                             <div class="column-l-r-margin-10">
@@ -609,8 +794,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="contact-data text-align-right">
+                    <div class="col-md-4 col-sm-4 col-12 my-2">
+                        <div class="contact-data text-align-right-md text-center">
                             <!-- <figure>+1 (734) 123-4567</figure> -->
                             <div class="headline-xxxxm"><i class="fa-solid fa-phone"></i>
                                 <a href="tel:+919898627527"
@@ -637,7 +822,7 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <hr>
-                <div class="note">(C) 2016 All Rights Reserved</div>
+                <div class="note">(C) 2024 All Rights Reserved</div>
                 <!--end note-->
                 <!--end numbers-->
                 <div class="to-top">
@@ -649,7 +834,7 @@
             <!--end container-->
             <div class="background-wrapper">
                 <div class="bg-transfer opacity-30">
-                    <img src="assets/img/Vision_Imgs/01/IMG_0938-HDR_copy.jpg" alt="">
+                    <img src="assets/img/Vision_Imgs/Footer.jpg" alt="">
                 </div>
                 <div class="background-color background-color-black"></div>
             </div>
@@ -1119,52 +1304,72 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_ur-FzPXiZmG0BQk1-AYI2spzE-vSyAywE_ky5wp85I5mCCY8De0hhGeO2TmSv5uL/exec';
-        const form = document.getElementById('appointment_form');
-        const msg = document.getElementById("msg");
+        document.addEventListener('DOMContentLoaded', function () {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw_ur-FzPXiZmG0BQk1-AYI2spzE-vSyAywE_ky5wp85I5mCCY8De0hhGeO2TmSv5uL/exec';
+            const form = document.getElementById('appointment_form');
+            const submitButton = document.getElementById('appointment_form_btn');
+            const socialMain = document.querySelector(".social-main");
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form),
-            })
-                .then(response => {
-                    console.log(response)
-                    if (response.status === 200) {
-                        return response.json();
-                    }
-                    throw new Error('Network response was not ok.');
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // Disable the submit button
+                submitButton.disabled = true;
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form),
                 })
-                .then(data => {
-                    // msg.innerHTML = "Message sent successfully";
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Your work has been saved',
-                        showConfirmButton: false,
-                        timer: 1500
+                    .then(response => {
+                        console.log(response);
+                        if (response.status === 200) {
+                            return response.json();
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .then(data => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Your work has been saved',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        form.reset();
+                        downloadPDF('assets/img/Vision_Imgs/Brochure/Vision_Ventilla_3_BHK_Spacious_Living.pdf');
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                    .finally(() => {
+                        // Enable the submit button
+                        submitButton.disabled = false;
                     });
-                    form.reset();
-                    downloadPDF('assets/img/Vision_Imgs/architecture-buildings-city-fog-373965.jpg');
-                })
-                .catch(error => console.error('Error!', error.message));
+            });
 
+            // Open the modal when the download link is clicked
+            document.querySelector('.btn-slide2').addEventListener('click', function () {
+                $('#appointment').modal('show');
+            });
+
+            function downloadPDF(pdfURL) {
+                const link = document.createElement('a');
+                link.href = pdfURL;
+                link.download = 'brochure.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            // Social-main visibility on scroll
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= 300) {
+                    socialMain.classList.remove("hidden");
+                    socialMain.classList.add("visible");
+                } else {
+                    socialMain.classList.remove("visible");
+                    socialMain.classList.add("hidden");
+                }
+            });
         });
 
-        // Open the modal when the download link is clicked
-        document.querySelector('.btn-slide2').addEventListener('click', function () {
-            $('#appointment').modal('show');
-        });
-
-
-        function downloadPDF(pdfURL) {
-            const link = document.createElement('a');
-            link.href = pdfURL;
-            link.download = 'brochure.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
 
     </script>
 
@@ -1194,6 +1399,66 @@
                 loadingScreen.style.display = 'none';
             });
         });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Owl Carousel
+            var $owl = $('.big-gallery').owlCarousel({
+                items: 3,
+                autoWidth: true,
+                nav: true,
+                dots: false,
+                center: true,
+                loop: true,
+                navContainer: '#big-gallery-nav'
+            });
+
+            // Initialize LightGallery
+            var gallery = lightGallery(document.getElementById('lightgallery'), {
+                plugins: [lgZoom, lgThumbnail],
+                speed: 500,
+                download: false,
+                counter: false,
+                slideEndAnimation: true,
+                selector: '.slide a', // Target only the links within slides
+                onAfterOpen: function () {
+                    // Hide social-main when LightGallery is opened
+                    document.querySelector('.social-main').classList.add('hidden');
+                },
+                onCloseAfter: function () {
+                    // Show social-main when LightGallery is closed
+                    if (window.scrollY >= 300) {
+                        document.querySelector('.social-main').classList.add('visible');
+                        document.querySelector('.social-main').classList.remove('hidden');
+                    } else {
+                        document.querySelector('.social-main').classList.remove('visible');
+                        document.querySelector('.social-main').classList.add('hidden');
+                    }
+                }
+            });
+
+            // Open LightGallery on image click
+            $('.big-gallery .slide').on('click', function (e) {
+                e.preventDefault();
+                var index = $(this).index();
+                gallery.openGallery(index);
+            });
+
+            // Social-main visibility on scroll
+            var socialMain = document.querySelector(".social-main");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= 300) {
+                    socialMain.classList.remove("hidden");
+                    socialMain.classList.add("visible");
+                } else {
+                    socialMain.classList.remove("visible");
+                    socialMain.classList.add("hidden");
+                }
+            });
+        });
+
     </script>
 </body>
 
