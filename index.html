@@ -25,6 +25,9 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lg-zoom/dist/lg-zoom.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/custom_css.css" type="text/css">
 
@@ -123,7 +126,8 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="feature has-icon" data-scroll-reveal="enter left and move 20px">
-                                <i class="icon"><img src="assets/img/Vision_Imgs/icon/Morden_Living_Icon.png" alt="" style="max-width: 69px;"></i>
+                                <i class="icon"><img src="assets/img/Vision_Imgs/icon/Morden_Living_Icon.png" alt=""
+                                        style="max-width: 69px;"></i>
                                 <!--end icon-->
                                 <div class="description">
                                     <h3>Morden Living</h3>
@@ -157,7 +161,8 @@
                         <!--end col-md-4-->
                         <div class="col-md-4 col-sm-4">
                             <div class="feature has-icon" data-scroll-reveal="enter right and move 20px">
-                                <i class="icon"><img src="assets/img/Vision_Imgs/icon/Peaceful_Surrounding_Icon.png" alt="" style="max-width: 100px;"></i>
+                                <i class="icon"><img src="assets/img/Vision_Imgs/icon/Peaceful_Surrounding_Icon.png"
+                                        alt="" style="max-width: 100px;"></i>
                                 <!--end icon-->
                                 <div class="description">
                                     <h3>Peaceful Surrounding</h3>
@@ -333,52 +338,48 @@
                 <!--end container-->
             </div>
             <!--end block-->
-
             <div class="block" id="gallery">
                 <div class="container">
-                    <h2>Gallery.</h2>
+                    <h2>Gallery</h2>
                 </div>
                 <div class="owl-carousel big-gallery" data-owl-items="3" data-owl-auto-width="1" data-owl-nav="1"
                     data-owl-dots="0" data-owl-center="1" data-owl-loop="1" data-owl-nav-container="#big-gallery-nav">
                     <div class="slide">
                         <div class="container">
-                            <img src="assets/img/Vision_Imgs/05/01.jpg" alt="">
+                            <a href="assets/img/Vision_Imgs/05/01.jpg">
+                                <img src="assets/img/Vision_Imgs/05/01.jpg" alt="">
+                            </a>
                             <div class="description">
                                 <h3 class="framed">Front View</h3>
                             </div>
                         </div>
-                        <!--end container-->
                     </div>
-                    <!--end slide-->
                     <div class="slide">
                         <div class="container">
-                            <img src="assets/img/Vision_Imgs/05/16.jpg" alt="">
+                            <a href="assets/img/Vision_Imgs/05/16.jpg">
+                                <img src="assets/img/Vision_Imgs/05/16.jpg" alt="">
+                            </a>
                             <div class="description">
                                 <h3 class="framed">Garage</h3>
                             </div>
                         </div>
-                        <!--end container-->
                     </div>
-                    <!--end slide-->
                     <div class="slide">
                         <div class="container">
-                            <img src="assets/img/Vision_Imgs/05/17.jpg" alt="">
+                            <a href="assets/img/Vision_Imgs/05/17.jpg">
+                                <img src="assets/img/Vision_Imgs/05/17.jpg" alt="">
+                            </a>
                             <div class="description">
                                 <h3 class="framed">Back View</h3>
                             </div>
                         </div>
-                        <!--end container-->
                     </div>
-                    <!--end slide-->
                 </div>
-                <!--end big-gallery-->
                 <div class="container">
                     <div class="owl-nav-wrapper">
                         <div class="owl-nav" id="big-gallery-nav"></div>
                     </div>
-                    <!--end owl-nav-wrapper-->
                 </div>
-                <!--end container-->
             </div>
 
             <!--end block-->
@@ -392,7 +393,7 @@
                 <div class="row">
                     <div class="col-12 text-center">
 
-                        <a href="#" class="btn-slide2">
+                        <a href="javascript:void(0);" class="btn-slide2">
                             <span class="circle2"><i class="fa-solid fa-arrow-down"></i></span>
                             <span class="title2">Download Brochure</span>
                             <span class="title-hover2">Click here</span>
@@ -738,25 +739,28 @@
                         </svg>
                     </span>
                     <h6 class="sfgp-heading">Fill this form for Inquiry</h6>
-                    <form class=" row m-0" id="appointment_form" method="POST">
+                    <form class="row m-0" id="appointment_form" method="POST">
                         <div class="custom-form__group col-sm-6 form-group">
-                            <input type="text" name="appointment_fname" id="appointment_fname" placeholder=" " />
+                            <input type="text" name="appointment_fname" id="appointment_fname" placeholder=" "
+                                required />
                             <label class="group__label" for="appointment_fname"><i
                                     class="fa-regular fa-user me-2"></i>First Name</label>
                         </div>
                         <div class="custom-form__group col-sm-6 form-group">
-                            <input type="text" name="appointment_lname" id="appointment_lname" placeholder=" " />
+                            <input type="text" name="appointment_lname" id="appointment_lname" placeholder=" "
+                                required />
                             <label class="group__label" for="appointment_lname"><i
                                     class="fa-regular fa-user me-2"></i>Last Name</label>
                         </div>
                         <div class="custom-form__group col-md-6 form-group">
-                            <input type="text" name="appointment_email" id="appointment_email" placeholder=" " />
+                            <input type="email" name="appointment_email" id="appointment_email" placeholder=" "
+                                required />
                             <label class="group__label" for="appointment_email"><i
                                     class="fa-solid fa-envelope me-2"></i>Email Address</label>
                         </div>
                         <div class="custom-form__group col-md-6 form-group">
                             <input type="text" name="appointment_phone" id="appointment_phone" maxlength="10"
-                                placeholder=" " />
+                                placeholder=" " required />
                             <label class="group__label" for="appointment_phone"><i
                                     class="fa-solid fa-phone me-2"></i>Mobile Number</label>
                         </div>
@@ -769,7 +773,7 @@
                             </div>
                         </div>
                         <div class="custom-form__group col-sm-6 form-group hide inquirydt">
-                            <input type="date" class="" name="date" id="date" placeholder=" "  />
+                            <input type="date" class="" name="date" id="date" placeholder=" " />
                             <label class="group__label" for="date"><i
                                     class="fa-regular fa-calendar me-2"></i>Date</label>
                         </div>
@@ -789,6 +793,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <div class="social-main hidden">
         <div class="d-flex flex-column">
@@ -1069,7 +1076,7 @@
 
     </script>
 
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             // Show modal on button click
             $('.btn-slide2').click(function (e) {
@@ -1094,7 +1101,67 @@
             });
         });
 
+    </script> -->
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_ur-FzPXiZmG0BQk1-AYI2spzE-vSyAywE_ky5wp85I5mCCY8De0hhGeO2TmSv5uL/exec';
+        const form = document.getElementById('appointment_form');
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+                .then(response => {
+                    console.log(response)
+                    if (response.status === 200) {
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    // msg.innerHTML = "Message sent successfully";
+                    alert('Message Sent Successfully')
+                    form.reset();
+                    downloadPDF('assets/img/Vision_Imgs/architecture-buildings-city-fog-373965.jpg');
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+
+        // Open the modal when the download link is clicked
+        document.querySelector('.btn-slide2').addEventListener('click', function () {
+            $('#appointment').modal('show');
+        });
+
+
+        function downloadPDF(pdfURL) {
+            const link = document.createElement('a');
+            link.href = pdfURL;
+            link.download = 'brochure.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
     </script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize LightGallery
+            $('#gallery .owl-carousel').lightGallery({
+                download: false, // Disable download button
+                selector: '.slide a', // Selector for individual image links
+                zoom: true, // Enable zooming on each image click
+                mode: 'lg-fade', // LightGallery animation mode
+            });
+        });
+    </script>
+
+
+
 
 
 
