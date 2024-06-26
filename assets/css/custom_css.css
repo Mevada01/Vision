@@ -1496,3 +1496,22 @@ a .temp_img img {
         filter: blur(4px);
     }
 }
+
+
+@media (max-width:992px) {
+    .big-gallery .slide img {
+        height: 455px;
+    }
+}
+
+@media (max-width:767px) {
+    .big-gallery .slide img {
+        height: 450px;
+    }
+}
+
+@media (max-width:450px) {
+    .big-gallery .slide img {
+        height: 250px;
+    }
+}
