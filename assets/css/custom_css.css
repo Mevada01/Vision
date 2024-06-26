@@ -213,6 +213,11 @@ input:-webkit-autofill:active {
     background-color: #00458bb7 !important;
 }
 
+.appointment-btn.disabled {
+    background-color: lightgray !important;
+    cursor: not-allowed;
+}
+
 .custom_d-flex {
     display: flex;
     justify-content: space-between;
@@ -669,7 +674,7 @@ input[type='submit']:hover {
 textarea.form-input {
     height: 75px;
     margin-bottom: 0 !important;
-    
+
 }
 
 /* 22.3. Input with border ========================================================================== */
@@ -1477,36 +1482,43 @@ a .temp_img img {
     -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
     animation: blur-text 1.5s 1.2s infinite linear alternate;
 }
+
 .loading-text span:nth-child(8) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 1.4s infinite linear alternate;
     animation: blur-text 1.5s 1.4s infinite linear alternate;
 }
+
 .loading-text span:nth-child(9) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 1.6s infinite linear alternate;
     animation: blur-text 1.5s 1.6s infinite linear alternate;
 }
+
 .loading-text span:nth-child(10) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 1.8s infinite linear alternate;
     animation: blur-text 1.5s 1.8s infinite linear alternate;
 }
+
 .loading-text span:nth-child(11) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 2s infinite linear alternate;
     animation: blur-text 1.5s 2s infinite linear alternate;
 }
+
 .loading-text span:nth-child(12) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 2.2s infinite linear alternate;
     animation: blur-text 1.5s 2.2s infinite linear alternate;
 }
+
 .loading-text span:nth-child(13) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 2.4s infinite linear alternate;
     animation: blur-text 1.5s 2.4s infinite linear alternate;
 }
+
 .loading-text span:nth-child(14) {
     filter: blur(0px);
     -webkit-animation: blur-text 1.5s 2.6s infinite linear alternate;
@@ -1544,6 +1556,7 @@ a .temp_img img {
     .big-gallery .slide img {
         height: 450px;
     }
+
     /* .text-align-right-md{
         text-align: right !important;
     } */
@@ -1557,17 +1570,185 @@ a .temp_img img {
 
 
 @media (min-width:767px) {
-     .text-align-left-md{
+    .text-align-left-md {
         text-align: left !important;
     }
-     .text-align-right-md{
+
+    .text-align-right-md {
         text-align: right !important;
     }
-    .mb-3{
-        margin-bottom: 30px !important; 
+
+    .mb-3 {
+        margin-bottom: 30px !important;
     }
 }
 
-.my-2{
+.my-2 {
     margin: 10px 0;
+}
+
+
+a.animated-button:link,
+a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+a.animated-button:link:after,
+a.animated-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    /* width: 100%; */
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+}
+
+a.animated-button:link:hover,
+a.animated-button:visited:hover {
+    color: #FFF;
+    text-shadow: none;
+}
+
+a.animated-button:link:hover:after,
+a.animated-button:visited:hover:after {
+    /* height: 450%; */
+}
+
+a.animated-button:link,
+a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+a.animated-button.thar-three {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 2px solid #007d47;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+a.animated-button.thar-three:hover {
+    color: #fff !important;
+    background-color: transparent;
+    text-shadow: nthree;
+}
+
+a.animated-button.thar-three:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+}
+
+a.animated-button.thar-three:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #007d47;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* HTML: <div class="loader"></div> */
+/* .main-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+} */
+
+.loader {
+    width: 60px;
+    aspect-ratio: 1;
+    background:
+        linear-gradient(90deg, #fff 50%, #007d47 0) top/100% 50% no-repeat,
+        linear-gradient(90deg, #ffcc29 50%, #f9ff75 0);
+    -webkit-mask: linear-gradient(#000 0 0) 0 0/50% 50% no-repeat;
+    animation: l18 2s infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 99999; */
+}
+
+@keyframes l18 {
+    0% {
+        -webkit-mask-position: 0 0
+    }
+
+    25% {
+        -webkit-mask-position: 100% 0
+    }
+
+    50% {
+        -webkit-mask-position: 100% 100%
+    }
+
+    75% {
+        -webkit-mask-position: 0 100%
+    }
+
+    100% {
+        -webkit-mask-position: 0 0
+    }
+}
+
+/* .lg-backdrop {
+    background-color: #000000e8 !important;
+} */
+.lg-backdrop.in {
+    opacity: .9;
+}
+
+
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 10px;
 }
