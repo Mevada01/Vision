@@ -982,7 +982,7 @@ ul.check-marks li:before {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 }
 
@@ -1869,6 +1869,7 @@ ul.check-marks li:before {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .feature.has-icon .description {

@@ -28,6 +28,8 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lg-zoom/dist/lg-zoom.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/custom_css.css" type="text/css">
 
@@ -35,7 +37,19 @@
 
 </head>
 
-<body class="has-loading-screen links-hover-effect" data-spy="scroll" data-target=".navigation">
+<body class="links-hover-effect"  data-spy="scroll" data-target=".navigation">
+
+    <div class="loading has-loading-screen" data-target=".navigation">
+        <div class="loading-text">
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+        </div>
+    </div>
 
     <div class="page-wrapper" id="page-top">
         <header id="page-header">
@@ -1124,11 +1138,17 @@
                 })
                 .then(data => {
                     // msg.innerHTML = "Message sent successfully";
-                    alert('Message Sent Successfully')
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     form.reset();
                     downloadPDF('assets/img/Vision_Imgs/architecture-buildings-city-fog-373965.jpg');
                 })
                 .catch(error => console.error('Error!', error.message));
+
         });
 
         // Open the modal when the download link is clicked
@@ -1160,9 +1180,21 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var loadingScreen = document.querySelector('.loading');
 
+            // Hide loading screen when page is fully loaded or after 5 seconds
+            var timeoutId = setTimeout(function () {
+                loadingScreen.style.display = 'none';
+            }, 5000);  // 5 seconds timeout
 
-
-
-
+            window.addEventListener('load', function () {
+                clearTimeout(timeoutId);
+                loadingScreen.style.display = 'none';
+            });
+        });
+    </script>
 </body>
+
+</html>
