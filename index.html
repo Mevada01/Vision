@@ -129,20 +129,20 @@
                 <div class="owl-carousel" data-owl-dots="0" data-owl-nav="1" data-owl-autoplay="1" data-owl-loop="1"
                     data-owl-fadeout="1">
                     <div class="hero-slide">
-                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_0866-HDR_copy.jpg" alt="">
+                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_0866-HDR.jpg" alt="">
                         </div>
                     </div>
                     <div class="hero-slide">
                         <!-- <div class="bg-transfer"><img src="assets/img/Vision_Imgs/Hero _Slider_Img_2.jpg" alt=""></div> -->
-                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_0938-HDR_copy.jpg" alt="">
+                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_0938-HDR.jpg" alt="">
                         </div>
                     </div>
                     <div class="hero-slide">
-                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_1159-HDR_copy.jpg" alt="">
+                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_1159-HDR.jpg" alt="">
                         </div>
                     </div>
                     <div class="hero-slide">
-                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_1319-HDR_copy.jpg" alt="">
+                        <div class="bg-transfer"><img src="assets/img/Vision_Imgs/01/IMG_1319-HDR.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -606,7 +606,7 @@
                 <div class="row">
                     <div class="col-12 text-center">
 
-                        <a href="javascript:void(0);" class="btn-slide2">
+                        <a href="javascript:void(0);" class="btn-slide2 download-brochure">
                             <span class="circle2"><i class="fa-solid fa-arrow-down"></i></span>
                             <span class="title2">Download Brochure</span>
                             <span class="title-hover2">Click here</span>
@@ -680,6 +680,9 @@
             </div>
 
             <!-- Who we are section end -->
+
+
+
             <div class="container">
                 <hr>
             </div>
@@ -1348,8 +1351,9 @@
 
     </script> -->
 
+    <!-- Inquiry form Fill  up JS Start  -->
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzQTJCmWQIehK-_1XLsrpDk_UcvDq_4X7PrQzBN1meiO00QDsy4PtTB0Lu6moJBCw08/exec';
             const form = document.getElementById('appointment_form');
@@ -1471,7 +1475,139 @@
             });
         });
 
+    </script> -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzQTJCmWQIehK-_1XLsrpDk_UcvDq_4X7PrQzBN1meiO00QDsy4PtTB0Lu6moJBCw08/exec';
+            const form = document.getElementById('appointment_form');
+            const submitButton = document.getElementById('appointment_form_btn');
+            const buttonSpinner = document.querySelector('.spinner-border');
+            const emailInput = document.getElementById('appointment_email');
+            const phoneInput = document.getElementById('appointment_phone');
+            const emailError = document.getElementById('email_error');
+            const phoneError = document.getElementById('phone_error');
+            const socialMain = document.querySelector(".social-main");
+
+            let downloadBrochure = false;
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // Validate the form
+                if (!validateForm()) {
+                    return;
+                }
+
+                // Disable the submit button
+                submitButton.disabled = true;
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                    .then(response => {
+                        if (response.status === 200) {
+                            return response.json();
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .then(data => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Thank you for your inquiry!',
+                            text: "We have received your request and one of our agents will get back to you shortly.",
+                            showConfirmButton: false,
+                            timer: 10000
+                        });
+                        form.reset();
+                        emailError.textContent = '';
+                        phoneError.textContent = '';
+
+                        if (downloadBrochure) {
+                            downloadPDF('assets/img/Vision_Imgs/Brochure/Vision_Ventilla_3_BHK_Spacious_Living.pdf');
+                            downloadBrochure = false; // Reset the flag
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: "Something went wrong. Please try submitting the form again.",
+                        });
+                    })
+                    .finally(() => {
+                        // Enable the submit button
+                        submitButton.disabled = false;
+                    });
+            });
+
+            emailInput.addEventListener('input', validateEmail);
+            phoneInput.addEventListener('input', validatePhone);
+
+            function validateForm() {
+                const emailValid = validateEmail();
+                const phoneValid = validatePhone();
+
+                return emailValid && phoneValid;
+            }
+
+            function validateEmail() {
+                const email = emailInput.value;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    emailError.textContent = 'Invalid email ID';
+                    return false;
+                }
+                emailError.textContent = '';
+                return true;
+            }
+
+            function validatePhone() {
+                const phone = phoneInput.value;
+                const phonePattern = /^[6-9]\d{9}$/;
+                if (!phonePattern.test(phone)) {
+                    phoneError.textContent = 'Invalid mobile number';
+                    return false;
+                }
+                phoneError.textContent = '';
+                return true;
+            }
+
+            // Open the modal when the inquiry link is clicked
+            document.querySelector('.inquiry').addEventListener('click', function () {
+                $('#appointment').modal('show');
+            });
+
+            // Open the modal and set the flag to download the brochure when the download link is clicked
+            document.querySelector('.download-brochure').addEventListener('click', function () {
+                downloadBrochure = true;
+                $('#appointment').modal('show');
+            });
+
+            function downloadPDF(pdfURL) {
+                const link = document.createElement('a');
+                link.href = pdfURL;
+                link.download = 'Vision_Ventilla_3_BHK_Spacious_Living.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            // Social-main visibility on scroll
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= 300) {
+                    socialMain.classList.add("show");
+                } else {
+                    socialMain.classList.remove("show");
+                }
+            });
+        });
+
     </script>
+    <!-- Inquiry form Fill  up JS End  -->
 
     <script>
         $(document).ready(function () {
