@@ -225,11 +225,11 @@
 
             <div class="block" id="about">
                 <div class="container">
-                    <h2>About the project.</h2>
+                    <!-- <h2>About the project.</h2> -->
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <!-- <h3>Place where you find yourself</h3> -->
-                            <h3>&nbsp;</h3>
+                            <h2>About the project.</h2>
                             <p>Vision Ventilla by Vision Creative Group, A pinnacle of prestige & luxury in modern
                                 Gandhinagar. This architectural marvel embodies sophistication &
                                 urbanity, setting new standards for upscale living. With meticulous attention to detail,
@@ -741,7 +741,7 @@
                                     <span class="">Send</span>
                                 </button> -->
                                 <button type="submit" class="sub-btn slide_right appointment-btn"
-                                    id="appointment_form_btn" style="width: 120px;">Send</button>
+                                    id="appointment_form_btn" style="width: 120px;font-size: 15px;">Send</button>
                                 <!-- <input type="hidden" value="Quick_Inquiry" name="type_of_form" />
                                 <i class="fa fa-refresh" id="form_process"></i> -->
                             </div>
@@ -806,7 +806,7 @@
                     </div>
                 </div>
                 <!--end brand-->
-                <div class="row d-flex align-items-center justify-content-center flex-column flex-md-row">
+                <div class="row d-flex align-items-center justify-content-center flex-column flex-md-row" style="width: auto !important;">
                     <div class="col-md-4 col-sm-4 col-12 my-md-2 my-25">
                         <div class="contact-data text-align-left-md text-center">
                             <a href="#" class="brand"><img
@@ -1647,7 +1647,10 @@
                 dots: false,
                 center: true,
                 loop: true,
-                navContainer: '#big-gallery-nav'
+                navContainer: '#big-gallery-nav',
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
             });
 
             // Initialize LightGallery
